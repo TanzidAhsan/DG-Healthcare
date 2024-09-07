@@ -1,0 +1,151 @@
+.dge-pharma {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a professional look */
+  }
+  
+  .hero-content {
+    max-width: 50%;
+    animation: fadeInLeft 1s ease-in-out; /* Animation for text */
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    color: #FC6514;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-button {
+    padding: 10px 20px;
+    background-color: #FC6514;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-button:hover {
+    background-color: #e55510;
+  }
+  
+  .hero-image-container {
+    max-width: 45%;
+    animation: fadeInRight 1s ease-in-out; /* Animation for the image */
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the image */
+  }
+  
+  .overview {
+    margin-bottom: 30px;
+  }
+  
+  .overview h2 {
+    font-size: 28px;
+    color: #FC6514;
+    margin-bottom: 15px;
+    text-align: center;
+    
+
+  }
+  
+  .overview p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+   
+  }
+  
+  .key-actors {
+    margin-bottom: 30px;
+  }
+  
+  .key-actors h2 {
+    font-size: 28px;
+    color: #FC6514;
+    margin-bottom: 20px;
+  }
+  
+  .actors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .actor-card {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    animation: fadeInUp 1s ease-in-out; /* Animation for cards */
+  }
+  
+  .actor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actor-card h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+  

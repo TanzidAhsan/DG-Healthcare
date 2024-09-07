@@ -1,0 +1,259 @@
+/* Topbar Styles */
+.topbar {
+  width: 100%;
+  height: 40px;
+  background-color: black; /* Matches the main color scheme */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 20px;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Center align with max-width */
+  align-items: center;
+}
+
+.topbar-content span {
+  font-size: 14px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.5s ease-out; /* Slide-in animation */
+}
+
+.topbar-content span:hover {
+  color: #FFD700; /* Highlight color on hover */
+  text-shadow: 0 0 10px #FFD700; /* Glow effect on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.topbar-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.topbar-icons a {
+  color: #FFFFFF;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.topbar-icons a:hover {
+  color: #FFD700; /* Highlight color on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 40px; /* Adjust according to the height of the topbar */
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #FFFFFF;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 117px; /* Increased height for better visibility */
+  width: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+  transform: scale(1.05);
+}
+
+.navbar-since {
+  font-size: 1.2rem; /* Slightly larger font for Dipon Group */
+  color: #FC6514; /* Black color for "Dipon Group" to make it stand out */
+  font-weight: bold;
+  text-align: center; /* Center text for both Dipon Group and Since 1970 */
+  display: block; /* Ensures both lines stack vertically */
+}
+
+.navbar-since-small {
+  font-size: 0.8rem; /* Smaller font for Since 1970 */
+  display: block; /* Makes it appear on the next line */
+  margin-top: 1.5px; /* Adjusts spacing to bring it closer to Dipon Group */
+  color: #000000; /* Themed color for "Since 1970" */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links li a,
+.dropdown-button {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-links li a:hover,
+.dropdown-button:hover {
+  background-color: #FC6514;
+  color: white;
+}
+
+.services-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  list-style: none;
+  padding: 0;
+  display: none;
+  z-index: 1001;
+  min-width: 180px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+.services-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+  color: #333333;
+  font-weight: normal;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-menu li a:hover {
+  color: white;
+  background-color: #FC6514;
+  border-radius: 4px;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #EAEAEA;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Topbar adjustments */
+  .topbar-content {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .topbar-icons {
+    gap: 10px; /* Adjust gap between icons */
+  }
+
+  .topbar-icons a {
+    font-size: 16px; /* Adjust icon size for smaller screens */
+  }
+
+  .navbar {
+    padding: 0 20px;
+    height: 80px; /* Adjust height if needed */
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px; /* Adjust according to the height of the navbar */
+    left: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-links li a {
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .services-dropdown .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .navbar-logo-img {
+    height: 60px; /* Slightly smaller for better fit on small screens */
+  }
+}

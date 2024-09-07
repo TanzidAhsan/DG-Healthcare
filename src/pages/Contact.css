@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  background: linear-gradient(135deg, #ffffff, #f4f4f4); /* Light gradient background */
+}
+
+/* Main Container for Contact Page */
+.contact-container {
+  display: flex; /* Flexbox to arrange content side by side */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Center aligns the content */
+  align-items: stretch; /* Ensures all flex items are the same height */
+  padding: 80px 20px; /* Adds padding around the container */
+  margin-top: 80px; /* Matches the height of the navbar */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 80px auto 40px; /* Centered and margin at the top and bottom */
+  gap: 20px; /* Adds space between the contact info and map */
+}
+
+/* Contact Information Styling */
+.contact-info {
+  flex: 1; /* Flex-grow to allow space for the contact information */
+  background-color: #ffffff; /* White background for contact info */
+  padding: 30px;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  animation: fadeIn 1.5s ease-out; /* Fade-in animation for contact info */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Map Container Styling */
+.map-container {
+  flex: 1; /* Flex-grow to allow space for the map */
+  height: auto; /* Adjusts height to match content */
+  border-radius: 12px; /* Rounded corners for the map */
+  overflow: hidden; /* Keeps the map edges smooth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow around the map */
+  animation: zoomIn 1.5s ease-out; /* Zoom-in animation for the map */
+}
+
+/* Heading and Subheading Styling */
+.contact-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #FC6514; /* Primary brand color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+  animation: slideIn 1.5s ease-out; /* Slide-in animation for heading */
+}
+
+.contact-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #FC6514; /* Underline effect with brand color */
+}
+
+.contact-subheading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  animation: fadeInUp 1s ease-out; /* Fade-in up animation for subheading */
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #666;
+  animation: fadeInText 1.2s ease-out; /* Smooth fade-in animation for text */
+}
+
+/* Email Link Styling */
+.email-link {
+  color: #FC6514; /* Primary brand color for email link */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #E56717; /* Slightly darker shade on hover */
+}
+
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  animation: bounceIn 1s ease-out; /* Bounce-in animation for social icons */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #333; /* Base color for icons */
+  background-color: #fff; /* Background for icons */
+  border-radius: 50%; /* Rounded icons */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for icons */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover for engagement */
+  background-color: #FC6514; /* Brand color on hover */
+  color: #fff; /* White icon color on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stacks elements on smaller screens */
+    align-items: center; /* Center-aligns for smaller devices */
+  }
+
+  .contact-info, .map-container {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Adds space between stacked elements */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
